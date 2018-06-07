@@ -6,7 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestFizzBuzz {
+import java.util.ArrayList;
+
+ public class TestFizzBuzz {
 
   private FizzBuzz fixture;
 
@@ -22,44 +24,70 @@ public class TestFizzBuzz {
 
   @Test
   public void testNegTen() {
-    String[] expectedResult = new String[1];
-    expectedResult[0] = "Please enter a positive integer!";
-    String[] result = new String[1];
+    ArrayList<String> expectedResult = new ArrayList<String>();
+    expectedResult.add("Please enter a positive integer!");
+    ArrayList<String> result = new ArrayList<>();
     result = fixture.fizzBuzzArray(-10);
-    assertArrayEquals(expectedResult, result);
+    assertArrayEquals(expectedResult.toArray(), result.toArray());
   }
 
   @Test
   public void testNegOne() {
-    String[] expectedResult = new String[1];
-    expectedResult[0] = "Please enter a positive integer!";
-    String[] result = new String[1];
+    ArrayList<String> expectedResult = new ArrayList<String>();
+    expectedResult.add("Please enter a positive integer!");
+    ArrayList<String> result = new ArrayList<>();
     result = fixture.fizzBuzzArray(-1);
-    assertArrayEquals(expectedResult, result);
+    assertArrayEquals(expectedResult.toArray(), result.toArray());
   }
 
 
   @Test
   public void testZero() {
-    String[] expectedResult = new String[1];
-    expectedResult[0] = "Please enter a positive integer!";
-    String[] result = new String[1];
+    ArrayList<String> expectedResult = new ArrayList<String>();
+    expectedResult.add("Please enter a positive integer!");
+    ArrayList<String> result = new ArrayList<>();
     result = fixture.fizzBuzzArray(0);
-    assertArrayEquals(expectedResult, result);
+    assertArrayEquals(expectedResult.toArray(), result.toArray());
   }
 
   @Test
   public void testSeven() {
-    String[] expectedResult = new String[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7" };
-    String [] result = fixture.fizzBuzzArray(7);
-    assertArrayEquals(expectedResult, result);
+    ArrayList<String> expectedResult = new ArrayList<String>();
+    expectedResult.add("1");
+    expectedResult.add("2");
+    expectedResult.add("Fizz");
+    expectedResult.add("4");
+    expectedResult.add("Buzz");
+    expectedResult.add("Fizz");
+    expectedResult.add("7");
+    ArrayList<String> result = new ArrayList<>();
+    result = fixture.fizzBuzzArray(7);
+    assertArrayEquals(expectedResult.toArray(), result.toArray());
   }
 
   @Test
   public void test17() {
-    String[] expectedResult = new String[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17" };
-    String [] result = fixture.fizzBuzzArray(17);
-
-    assertArrayEquals(expectedResult, result);
+    ArrayList<String> expectedResult = new ArrayList<String>();
+    expectedResult.add("1");
+    expectedResult.add("2");
+    expectedResult.add("Fizz");
+    expectedResult.add("4");
+    expectedResult.add("Buzz");
+    expectedResult.add("Fizz");
+    expectedResult.add("7");
+    expectedResult.add("8");
+    expectedResult.add("Fizz");
+    expectedResult.add("Buzz");
+    expectedResult.add("11");
+    expectedResult.add("Fizz");
+    expectedResult.add("13");
+    expectedResult.add("14");
+    expectedResult.add("FizzBuzz");
+    expectedResult.add("16");
+    expectedResult.add("17");
+    ArrayList<String> result = new ArrayList<>();
+    result = fixture.fizzBuzzArray(17);
+    assertArrayEquals(expectedResult.toArray(), result.toArray());
   }
+
 }

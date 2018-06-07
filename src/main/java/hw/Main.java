@@ -1,5 +1,7 @@
 package hw;
 
+import java.util.ArrayList;
+
 public class Main {
 
   public static void main(final String[] args) {
@@ -9,13 +11,13 @@ public class Main {
       try {
         max = Integer.parseInt(args[0]);
         if(max < 0){
-          String[] mainArray = new String [1];
+          ArrayList<String> mainArray = new ArrayList<String>();
           mainArray = FizzBuzz.fizzBuzzArray(max);
           for(String rslt : mainArray)
             System.out.println(rslt);
         }
         else {
-          String[] mainArray = new String[max];
+          ArrayList<String> mainArray = new ArrayList<String>();
           mainArray = FizzBuzz.fizzBuzzArray(max);
           for (String rslt : mainArray)
             System.out.println(rslt);

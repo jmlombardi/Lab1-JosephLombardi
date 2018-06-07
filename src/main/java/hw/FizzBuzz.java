@@ -1,29 +1,31 @@
 package hw;
 
+import java.util.ArrayList;
+
 public class FizzBuzz {
 
-    public static String[] fizzBuzzArray(int choice){
+    public static ArrayList fizzBuzzArray(int choice){
 
         if(choice < 1){
-            String[] joe = new String[1];
-            joe[0] = "Please enter a positive integer!";
-            return joe;
+            ArrayList<String> myArrLst= new ArrayList<String>();
+            myArrLst.add("Please enter a positive integer!");
+            return myArrLst;
         }
-        String[] joe = new String[choice];
+        //String[] joe = new String[choice];
+        ArrayList<String> myArrLst= new ArrayList<String>();
 
-        int arrIndx = 0;
-        for(int x = 1; x <= choice; x++,arrIndx++){
+        for(int x = 1; x <= choice; x++){
             if (x % 3 == 0 && x % 5 == 0) {
-                joe[arrIndx] = "FizzBuzz";
+                myArrLst.add("FizzBuzz");
             }
             else if (x % 3 == 0) {
-                joe[arrIndx] = "Fizz";
+                myArrLst.add("Fizz");
             }
             else if (x % 5 == 0) {
-                joe[arrIndx] = "Buzz";
+                myArrLst.add("Buzz");
             }
             else {
-                joe[arrIndx] = Integer.toString(x);
+                myArrLst.add(Integer.toString(x));
             }
 
         }//end for loop
@@ -31,6 +33,6 @@ public class FizzBuzz {
         //for(String rslt : joe)
             //System.out.println(rslt);
 
-        return joe;
+        return myArrLst;
     }
 }

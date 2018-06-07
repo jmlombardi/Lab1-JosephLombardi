@@ -8,11 +8,17 @@ public class Main {
     if (args.length > 0) {
       try {
         max = Integer.parseInt(args[0]);
-        if (max <= 0){
-          System.out.println("Please enter a positive number.");
+        if(max < 0){
+          String[] mainArray = new String [1];
+          mainArray = FizzBuzz.fizzBuzzArray(max);
+          for(String rslt : mainArray)
+            System.out.println(rslt);
         }
-        else{
-          FizzBuzz.fizzBuzzArray(max);
+        else {
+          String[] mainArray = new String[max];
+          mainArray = FizzBuzz.fizzBuzzArray(max);
+          for (String rslt : mainArray)
+            System.out.println(rslt);
         }
       }
       catch(NumberFormatException e){

@@ -4,24 +4,25 @@ public class FizzBuzz {
 
     public static String[] fizzBuzzArray(int choice){
 
+        if(choice < 1){
+            String[] joe = new String[1];
+            joe[0] = "Please enter a positive integer!";
+            return joe;
+        }
         String[] joe = new String[choice];
 
         int arrIndx = 0;
         for(int x = 1; x <= choice; x++,arrIndx++){
             if (x % 3 == 0 && x % 5 == 0) {
-                System.out.println("FizzBuzz");
                 joe[arrIndx] = "FizzBuzz";
             }
             else if (x % 3 == 0) {
-                System.out.println("Fizz");
                 joe[arrIndx] = "Fizz";
             }
             else if (x % 5 == 0) {
-                System.out.println("Buzz");
                 joe[arrIndx] = "Buzz";
             }
             else {
-                System.out.println(x);
                 joe[arrIndx] = Integer.toString(x);
             }
 
